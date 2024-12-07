@@ -12,17 +12,17 @@ The setup includes:
 
 ---
 ## Features
-Frontend: The static website is hosted on S3 and delivered via CloudFront.
+**Frontend:** The static website is hosted on S3 and delivered via CloudFront.
 
-Form Processing:
+**Form Processing:**
 - User form submission through API Gateway.
 - Data processing with AWS Lambda.
 - Storing form submissions in DynamoDB.
 
-Backend Store:
+**Backend Store:**
 - Amazon RDS for structured data storage.
 
-Multi-environment Support: Modularized configuration for dev, stage, and prod.
+**Multi-environment Support:** Modularized configuration for dev, stage, and prod.
 
 ----
 ## Project Structure
