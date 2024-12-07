@@ -1,16 +1,14 @@
 variable "api_name" {
-  description = "Name of the API Gateway"
+  description = "The name of the API Gateway"
+  type        = string
+}
+
+variable "lambda_function_arn" {
+  description = "The ARN of the Lambda function to integrate with API Gateway"
   type        = string
 }
 
 variable "stage_name" {
-  description = "Name of the deployment stage"
+  description = "The stage name for the API Gateway (e.g., dev, stage, prod)"
   type        = string
-  default     = "dev"
-}
-
-variable "tags" {
-  description = "Tags to apply to the API Gateway"
-  type        = map(string)
-  default     = {}
 }
