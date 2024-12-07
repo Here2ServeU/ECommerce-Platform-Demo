@@ -1,0 +1,21 @@
+{
+  "Comment": "Order processing workflow",
+  "StartAt": "Validate Order",
+  "States": {
+    "Validate Order": {
+      "Type": "Task",
+      "Resource": "arn:aws:lambda:region:account-id:function:validate_order",
+      "Next": "Process Payment"
+    },
+    "Process Payment": {
+      "Type": "Task",
+      "Resource": "arn:aws:lambda:region:account-id:function:process_payment",
+      "Next": "Send Confirmation"
+    },
+    "Send Confirmation": {
+      "Type": "Task",
+      "Resource": "arn:aws:lambda:region:account-id:function:send_confirmation",
+      "End": true
+    }
+  }
+}
