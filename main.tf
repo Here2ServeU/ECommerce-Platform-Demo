@@ -19,4 +19,18 @@ module "lambda" {
   }
 }
 
+module "step_functions" {
+  source          = "./modules/step_functions"
+  name            = "order-processing"
+  definition_file = "${path.module}/order_processing_definition.json"
+  resource_arns   = [
+    "arn:aws:lambda:region:account-id:function:validate_order",
+    "arn:aws:lambda:region:account-id:function:process_payment",
+    "arn:aws:lambda:region:account-id:function:send_confirmation",
+  ]
+  tags = {
+    Environment = var.environment
+  }
+}
+
 # Instantiate other modules similarly
