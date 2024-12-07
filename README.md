@@ -89,39 +89,41 @@ After deployment, note the outputs for:
 	•	RDS Endpoint: Use for database connections.
 
 ---
-Components
+## Components
 
-1. Frontend
-	•	S3: Static website hosting.
-	•	CloudFront: Global content delivery.
+**Frontend**
+- S3: Static website hosting.
+- CloudFront: Global content delivery.
 
-2. Form Processing
-	•	API Gateway: Accepts form submissions.
-	•	Lambda: Processes form data.
-	•	DynamoDB: Stores form submissions.
+**Form Processing**
+- API Gateway: Accepts form submissions.
+- Lambda: Processes form data.
+- DynamoDB: Stores form submissions.
 
-3. Backend Store
-	•	RDS: Relational database for structured data.
+**Backend Store**
+- RDS: Relational database for structured data.
 
 ---
 ## Cleanup
 
 To delete all resources and avoid ongoing costs:
 
-### 1. Destroy Resources
+**1. Destroy Resources**
 
 Navigate to the environment directory and run:
 ```bash
 terraform destroy
 ```
 
-### 2. Verify Deletion
+**2. Verify Deletion**
 
 Check the AWS Console to ensure all resources are deleted.
 
 ---
 ### Additional Notes
-	1.	Environment Variables: Sensitive information (e.g., RDS credentials) is securely stored in the Terraform configuration and Lambda environment.
-	2.	Extensibility: Additional environments can be added by duplicating and modifying the dev folder.
+
+Environment Variables: Sensitive information (e.g., RDS credentials) is securely stored in the Terraform configuration and Lambda environment.
+
+Extensibility: Additional environments can be added by duplicating and modifying the dev folder.
 
 ***Let me know if you’d like to adjust any details!***
