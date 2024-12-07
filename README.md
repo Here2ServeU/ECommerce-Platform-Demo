@@ -4,25 +4,30 @@ This repository contains Terraform configurations for deploying the infrastructu
 
 ---
 The setup includes:
+
 - Hosting a static website on S3 with CloudFront.
 - A user form to collect data and process submissions using API Gateway, Lambda, and DynamoDB.
-- Backend store using RDS for structured data.
+- The backend store uses RDS for structured data.
 - Multi-environment support for dev, stage, and prod.
 
 ---
 ## Features
-	1.	Frontend: Static website hosted on S3 and delivered via CloudFront.
-	2.	Form Processing:
-	•	User form submission through API Gateway.
-	•	Data processing with AWS Lambda.
-	•	Storing form submissions in DynamoDB.
-	3.	Backend Store:
-	•	Amazon RDS for structured data storage.
-	4.	Multi-environment Support: Modularized configuration for dev, stage, and prod.
+Frontend: The static website is hosted on S3 and delivered via CloudFront.
+
+Form Processing:
+- User form submission through API Gateway.
+- Data processing with AWS Lambda.
+- Storing form submissions in DynamoDB.
+
+Backend Store:
+- Amazon RDS for structured data storage.
+
+Multi-environment Support: Modularized configuration for dev, stage, and prod.
 
 ----
 ## Project Structure
 
+```jpeg
 t2s-ecommerce/
 ├── modules/
 │   ├── s3/               # S3 and static website hosting
@@ -35,6 +40,7 @@ t2s-ecommerce/
 │   ├── dev/              # Configuration for the dev environment
 │   ├── stage/            # Configuration for the stage environment
 │   ├── prod/             # Configuration for the prod environment
+```
 
 ---
 ## Prerequisites
