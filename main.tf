@@ -2,10 +2,38 @@ provider "aws" {
   region = var.aws_region
 }
 
+# S3 Module
 module "s3" {
   source      = "./modules/s3"
   bucket_name = var.s3_bucket_name
-  environment = var.environment
+  tags        = var.tags
+}
+
+# DynamoDB Module
+module "dynamodb" {
+  source          = "./modules/dynamodb"
+  table_name      = var.dynamodb_table_name
+  billing_mode    = var.dynamodb_billing_mode
+  hash_key        = var.dynamodb_hash_key
+  hash_key_type   = var.dynamodb_hash_key_type
+  range_key       = var.dynamodb_range_key
+  range_key_type  = var.dynamodb_range_key_type
+  tags            = var.tags
+}
+
+# API Gateway Module
+module "api_gateway" {
+  source      = "./modules/api_gateway"
+  api_name    = var.api_gateway_name
+  stage_name  = var.api_gateway_stage_name
+  tags        = var.tags
+}
+
+# SNS Module
+module "sns" {
+  source     = "./modules/sns"
+  topic_name = var.sns_topic_name
+  tags       = var.tags
 }
 
 module "lambda" {
@@ -33,4 +61,4 @@ module "step_functions" {
   }
 }
 
-# Instantiate other modules similarly
+
