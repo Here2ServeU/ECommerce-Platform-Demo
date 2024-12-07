@@ -51,14 +51,14 @@ t2s-ecommerce/
 ---
 ## Deployment Steps
 
-### 1. Clone the Repository
+**1. Clone the Repository**
 
 ```bash
 git clone https://github.com/Here2ServeU/t2s-ecommerce.git
 cd t2s-ecommerce
 ```
 
-### 2. Initialize Terraform
+**2. Initialize Terraform**
 
 Navigate to the desired environment (e.g., dev):
 
@@ -67,26 +67,26 @@ cd environments/dev
 terraform init
 ```
 
-### 3. Review Changes
+**3. Review Changes**
 
 Preview the resources that will be created:
 ```bash
 terraform plan
 ``` 
 
-### 4. Apply Changes
+**4. Apply Changes**
 
 Deploy the infrastructure:
 ```bash
 terraform apply
 ```
 
-### 5. Access Outputs
+**5. Access Outputs**
 
 After deployment, note the outputs for:
-	•	CloudFront URL: Access the frontend.
-	•	API Gateway URL: Integrated into the form’s action URL.
-	•	RDS Endpoint: Use for database connections.
+- CloudFront URL: Access the front end.
+- API Gateway URL: Integrated into the form’s action URL.
+- RDS Endpoint: Use for database connections.
 
 ---
 ## Components
