@@ -44,9 +44,9 @@ t2s-ecommerce/
 
 ---
 ## Prerequisites
-	1.	Terraform: Install Terraform v1.5 or newer.
-	2.	AWS CLI: Configure AWS credentials with sufficient permissions.
-	3.	ZIP Utility: To package Lambda function code.
+- Terraform: Install Terraform v1.5 or newer.
+- AWS CLI: Configure AWS credentials with sufficient permissions.
+- ZIP Utility: To package Lambda function code.
 
 ---
 ## Deployment Steps
@@ -54,7 +54,7 @@ t2s-ecommerce/
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-repo/t2s-ecommerce.git
+git clone https://github.com/Here2ServeU/t2s-ecommerce.git
 cd t2s-ecommerce
 ```
 
