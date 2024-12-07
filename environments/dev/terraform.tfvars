@@ -1,11 +1,16 @@
 aws_region = "us-east-1"
-
 bucket_name = "t2s-services-dev"
-
 dynamodb_table_name = "t2s-services-form-submissions-dev"
-
 lambda_function_name = "t2s-services-lambda-dev"
-
 api_name = "t2s-services-api-dev"
-
 stage_name = "dev"
+rds_allocated_storage  = 20
+rds_engine             = "mysql"
+rds_engine_version     = "8.0"
+rds_instance_class     = "db.t3.micro"
+rds_db_name            = "t2s_services_dev"
+rds_username           = "admin"
+rds_password           = "securepassword123"
+rds_publicly_accessible = false
+rds_subnet_group       = "default"
+rds_security_group_ids = ["sg-0123456789abcdef0"]
